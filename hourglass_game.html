@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hourglass Game - HTML5</title>
+    <link rel="stylesheet" href="hourglass_game.css">
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <h1>⏳ Hourglass Game</h1>
+            <div class="game-stats">
+                <div class="stat">
+                    <span class="stat-label">Score:</span>
+                    <span id="score">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Level:</span>
+                    <span id="level">1</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Time:</span>
+                    <span id="timer">30</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="game-main">
+            <canvas id="gameCanvas" width="800" height="600"></canvas>
+            
+            <div class="game-controls">
+                <button id="flipBtn" class="flip-button">🔄 Flip Hourglass</button>
+                <button id="pauseBtn" class="control-button">⏸️ Pause</button>
+                <button id="restartBtn" class="control-button">🔄 Restart</button>
+            </div>
+
+            <div class="game-instructions">
+                <h3>How to Play:</h3>
+                <ul>
+                    <li>Click "Flip Hourglass" to reverse the sand flow</li>
+                    <li>Time your flips to collect falling particles</li>
+                    <li>Collect gold particles for bonus points</li>
+                    <li>Avoid letting the timer run out!</li>
+                    <li>Each level increases difficulty and speed</li>
+                </ul>
+            </div>
+        </main>
+
+        <div id="gameOverModal" class="modal hidden">
+            <div class="modal-content">
+                <h2>Game Over!</h2>
+                <p>Final Score: <span id="finalScore">0</span></p>
+                <p>Level Reached: <span id="finalLevel">1</span></p>
+                <button id="playAgainBtn" class="play-again-button">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="hourglass_game.js"></script>
+</body>
+</html>
